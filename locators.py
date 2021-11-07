@@ -11,5 +11,5 @@ class PostLocator:
     date = 'div.streamItem_properties div.streamItem_details a time'
     answer = 'div.streamItem_content'
     likes = 'div.streamItem_footer div.heartButton a.counter'
-    img = 'div.streamItem_visual a img'
+    img = 'div.streamItem_visual a picture source'
     asker_url = 'header.streamItem_header a author'

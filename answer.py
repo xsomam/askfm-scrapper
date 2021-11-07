@@ -60,7 +60,7 @@ class SinglePost:
         locator = PostLocator.img
         image = self.post.select_one(locator)
         if image:
-            self.image_link = image.attrs['src']
+            self.image_link = image.attrs['srcset']
             self.image_extension = self.image_link.split('.')[-1]
             return True
         else:
