@@ -42,8 +42,7 @@ class SinglePost:
         locator = PostLocator.answer
         answer = self.post.select_one(locator)
         if answer:
-            extract = [q for q in answer][:-1]
-            return str(extract[0])
+            return str(answer.text)
         else:
             return None
 
@@ -60,7 +59,7 @@ class SinglePost:
         locator = PostLocator.img
         image = self.post.select_one(locator)
         if image:
-            self.image_link = image.attrs['src']
+            self.image_link = image.attrs['srcset']
             self.image_extension = self.image_link.split('.')[-1]
             return True
         else:
