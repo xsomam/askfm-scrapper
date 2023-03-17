@@ -42,8 +42,7 @@ class SinglePost:
         locator = PostLocator.answer
         answer = self.post.select_one(locator)
         if answer:
-            extract = [q for q in answer][:-1]
-            return str(extract[0])
+            return str(answer.text)
         else:
             return None
 
