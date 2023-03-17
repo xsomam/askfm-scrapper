@@ -74,7 +74,6 @@ def retrieve(askfm_nick, dl_img, to_csv, to_json):
 
                 # Select each indivifual question on profile
                 all_questions = soup.select(SiteLocators.QUESTIONS)
-
             except Exception:
                 print(f'Connection error at: {link}. Retrial in 5 seconds...')
                 # logger.info(f'Connection error at: {link}. Retrial in 5 seconds...')
@@ -131,7 +130,6 @@ def save_to_json(askfm_nick):
 
     _list = []
     file_name = f'{askfm_nick}.json'
-
     with open(os.path.join(BASE_DIR, askfm_nick,file_name), 'w') as file:
         for each in _question:
 

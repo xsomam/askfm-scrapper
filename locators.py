@@ -6,7 +6,7 @@ class SiteLocators:
 
 
 class PostLocator:
-    question = 'header.streamItem_header h2'
+    question = 'header.streamItem_header h3'
     link = 'div.streamItem_properties div.streamItem_details a'
     date = 'div.streamItem_properties div.streamItem_details a time'
     answer = 'div.streamItem_content'
